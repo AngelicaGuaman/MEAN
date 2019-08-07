@@ -14,12 +14,13 @@ export class ProgressComponent implements OnInit {
   }
 
   changeValue(value: number) {
+    this.percentage += value;
+
     if (this.percentage >= 100) {
-      return;
+      this.percentage = 100;
     }
     if (this.percentage <= 0) {
-      return;
+      this.percentage = 0;
     }
-    this.percentage += value;
   }
 }

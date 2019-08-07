@@ -5,6 +5,7 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { ProgressComponent } from './progress/progress.component';
 import { PagesComponent } from './pages.component';
 import { PAGES_ROUTES } from './pages.routes';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { PAGES_ROUTES } from './pages.routes';
   imports: [
     SharedModule,
     PAGES_ROUTES,
-    FormsModule,
+    FormsModule
   ]
 })
 export class PagesModule { }
