@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
+  percentage: number = 50;
   constructor() { }
 
   ngOnInit() {
   }
 
+  changeValue(value: number) {
+    if (this.percentage >= 100) {
+      return;
+    }
+    if (this.percentage <= 0) {
+      return;
+    }
+    this.percentage += value;
+  }
 }

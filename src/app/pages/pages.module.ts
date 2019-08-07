@@ -21,7 +21,8 @@ import { PAGES_ROUTES } from './pages.routes';
   ],
   imports: [
     SharedModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    FormsModule,
   ]
 })
 export class PagesModule { }
