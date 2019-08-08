@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-incremento',
@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncrementoComponent implements OnInit {
 
-  percentage: number = 50;
-  
-  constructor() { }
+  @Input('title') leyend: string = '';
+  @Input() percentage: number = 50;
+
+  @Output() changeValueEvent: EventEmitter<number> = new EventEmitter();
+
+  constructor() {
+    console.log('Leyenda', this.leyend);
+    console.log('Percentage', this.percentage);
+  }
 
   ngOnInit() {
+    console.log('Leyenda', this.leyend);
+    console.log('Percentage', this.percentage);
   }
 
   changeValue(value: number) {
@@ -23,6 +31,7 @@ export class IncrementoComponent implements OnInit {
     if (this.percentage <= 0) {
       this.percentage = 0;
     }
-  }
 
+    this.changeValueEvent.emit(this.percentage);
+  }
 }
