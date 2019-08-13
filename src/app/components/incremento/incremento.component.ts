@@ -25,13 +25,23 @@ export class IncrementoComponent implements OnInit {
   changeValue(value: number) {
     this.percentage += value;
 
-    if (this.percentage >= 100) {
+    if (this.percentage > 100) {
       this.percentage = 100;
-    }
-    if (this.percentage <= 0) {
+    }else if (this.percentage < 0) {
       this.percentage = 0;
     }
+    console.log('Percentage incrementador', this.percentage);
+  }
 
+  changeValueInput(newValue: number) {
+    this.percentage = newValue;
+
+    if (this.percentage > 100) {
+      this.percentage = 100;
+    } else if (this.percentage < 0) {
+      this.percentage = 0;
+    }
+    console.log('Percentage input value', this.percentage);
     this.changeValueEvent.emit(this.percentage);
   }
 }
