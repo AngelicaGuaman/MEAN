@@ -7,7 +7,6 @@ import { NopagefoundComponent } from "./pages/nopagefound/nopagefound.component"
 import { APP_ROUTES } from "./app.routes";
 import { RegisterComponent } from "./login/register.component";
 import { PagesModule } from './pages/pages.module';
-import { IncrementoComponent } from './components/incremento/incremento.component';
 
 @NgModule({
   declarations: [

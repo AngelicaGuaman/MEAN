@@ -25,8 +25,7 @@ import { ChartsModule } from 'ng2-charts';
   imports: [
     SharedModule,
     PAGES_ROUTES,
-    ComponentsModule,
-    ChartsModule
+    ComponentsModule
   ]
 })
 export class PagesModule { }
