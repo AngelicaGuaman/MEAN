@@ -8,19 +8,22 @@ import { PAGES_ROUTES } from './pages.routes';
 import { ComponentsModule } from '../components/components.module';
 
 import { ChartsModule } from 'ng2-charts';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     DashboardComponent,
     ProgressComponent,
-    Graficas1Component
+    Graficas1Component,
+    AccountSettingsComponent
   ],
   exports: [
     PagesComponent,
     DashboardComponent,
     ProgressComponent,
-    Graficas1Component
+    Graficas1Component,
+    AccountSettingsComponent
   ],
   imports: [
     SharedModule,
